@@ -19,7 +19,10 @@ fis.match('/src/icons/**.svg', {
     isJsLike: true,
     isMod: true,
     parser: [
-        fis.plugin('svgr'),
+        fis.plugin('svgr', {
+            // options
+            // 前往 https://www.smooth-code.com/open-source/svgr/docs/options/ 查看
+        }),
         fis.plugin('typescript', { // 把 jsx => js ，你可能会换成 babel 
             importHelpers: true,
             esModuleInterop: true,
